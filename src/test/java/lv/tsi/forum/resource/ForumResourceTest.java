@@ -14,13 +14,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-class ForumResourceTest {
+public class ForumResourceTest {
 
         @Autowired
         MockMvc mockMvc;
 
         @Test
-        void getAllTopics() throws Exception {
+        public void getAllTopics() throws Exception {
             mockMvc.perform(get("/forum/getAll")).andExpect(status().isOk());
         }
 }
